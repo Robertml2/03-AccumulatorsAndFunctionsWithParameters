@@ -41,7 +41,7 @@ def print_sequence1():
     print('Running print_sequence1:')
     print('--------------------------------------------------')
 
-    print_sequence1(10)
+    print_sequence1(11)
 
 
 
