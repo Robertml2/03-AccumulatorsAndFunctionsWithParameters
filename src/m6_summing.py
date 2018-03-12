@@ -30,17 +30,17 @@ def run_test_sum_cosines():
     print('Testing the   sum_cosines   function:')
     print('--------------------------------------------------')
 
-    expected = .13416
-    answer = sum_cosines(3)
+    expected = 1.5403
+    answer = sum_cosines(2)
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
-    expected = .13416
-    answer = sum_cosines(3)
+    expected = 1
+    answer = sum_cosines(1)
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
-    expected = .13416
+    expected = 1.124155
     answer = sum_cosines(3)
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
