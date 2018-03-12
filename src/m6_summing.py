@@ -30,8 +30,8 @@ def run_test_sum_cosines():
     print('Testing the   sum_cosines   function:')
     print('--------------------------------------------------')
 
-    expected = 3.9978
-    answer = sum_cosines(4)
+    expected = .13416
+    answer = sum_cosines(3)
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
@@ -49,7 +49,7 @@ def run_test_sum_cosines():
 def sum_cosines(n):
     total = 0
     for k in range(n):
-        total = total + (cos(radians(k)))
+        total = total + math.cos(k)
 
     return total
 
@@ -90,18 +90,18 @@ def run_test_sum_square_roots():
     print('Testing the   sum_square_roots   function:')
     print('--------------------------------------------------')
 
-    expected = 11.85
+    expected = 11.854408
     answer = sum_square_roots(5)
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
-    expected = .13416
-    answer = sum_square_roots(3)
+    expected = 3.4142135
+    answer = sum_square_roots(2)
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
-    expected = .13416
-    answer = sum_square_roots(3)
+    expected = 1.4142135
+    answer = sum_square_roots(1)
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
@@ -129,10 +129,9 @@ def sum_square_roots(n):
     # ------------------------------------------------------------------
 
     total = 0
-    for k in range(2*n):
-        total = total + (sum_square_roots(k))
+    for k in range(n+1):
+        total = total + math.sqrt(2*k)
     return total
-
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
