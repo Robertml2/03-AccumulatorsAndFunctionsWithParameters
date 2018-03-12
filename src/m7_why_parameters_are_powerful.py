@@ -97,7 +97,7 @@ def run_test_better_draw_circles():
     print('--------------------------------------------------')
     print('Testing  better_draw_circles:  See graphics window')
     print('--------------------------------------------------')
-    better_draw_circles(10)
+    better_draw_circles(3)
 
 
 def better_draw_circles(n):
@@ -105,12 +105,14 @@ def better_draw_circles(n):
     window = rg.RoseWindow(400, 400)
 
     center = rg.Point(200, 200)
-    for k in range(n):
-        circle = rg.Circle(center, k)
+    for k in range(20):
+        circle = rg.Circle(center, n*k)
         circle.attach_to(window)
-
+        window.render()
     window.close_on_mouse_click()
-    return better_draw_circles()
+
+
+
 # ----------------------------------------------------------------------
 # TODO: 3.
 #   In the previous exercise, you made a MORE POWERFUL version
