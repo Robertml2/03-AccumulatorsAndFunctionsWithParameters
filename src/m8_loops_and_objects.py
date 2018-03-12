@@ -42,6 +42,8 @@ def print_sequence1():
     print('Running print_sequence1:')
     print('--------------------------------------------------')
 
+    
+
 
 def draw_circles1():
     """
