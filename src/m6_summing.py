@@ -4,10 +4,11 @@ in its simplest classic forms:
    SUMMING:       total = total + number
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Madison Robertson.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
-
+import math
+from math import cos, radians
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_sum_cosines()
@@ -29,17 +30,41 @@ def run_test_sum_cosines():
     print('Testing the   sum_cosines   function:')
     print('--------------------------------------------------')
 
+    expected = 3.9978
+    answer = sum_cosines(4)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = .13416
+    answer = sum_cosines(3)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = .13416
+    answer = sum_cosines(3)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
+
 
 def sum_cosines(n):
-    """
-    What comes in:  A non-negative integer n.
-    What goes out:  The sum of the cosines of the integers
-       0, 1, 2, 3, ... n, inclusive, for the given n.
-    Side effects:   None.
-    Example:
-      If n is 3, this function returns
-        cos(0) + cos(1) + cos(2) + cos(3)   which is about 0.13416.
-    """
+    total = 0
+    for k in range(n):
+        total = total + (cos(radians(k)))
+
+    return total
+
+
+
+
+    #"""
+    #What comes in:  A non-negative integer n.
+    #What goes out:  The sum of the cosines of the integers
+    #  0, 1, 2, 3, ... n, inclusive, for the given n.
+    # Side effects:   None.
+    #Example:
+    # If n is 3, this function returns
+    #   cos(0) + cos(1) + cos(2) + cos(3)   which is about 0.13416.
+    #"""
     # ------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
