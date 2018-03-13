@@ -5,7 +5,7 @@ in its simplest classic forms:
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
          their colleagues and Madison Robertson.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -29,6 +29,23 @@ def run_test_sum_powers():
     print('Testing the   sum_powers   function:')
     print('--------------------------------------------------')
 
+    expected = 144.45655
+    answer = sum_powers(101, .1)
+    print('Test 1 expected:', expected )
+    print('       actual:', answer)
+
+    expected = 3.80826
+    answer = sum_powers(6, -0.3)
+    print('Test 1 expected:', expected)
+    print('       actual:', answer)
+
+    expected = 10.50635
+    answer = sum_powers(6, .7)
+    print('Test 1 expected:', expected)
+    print('       actual:', answer)
+
+
+
 
 def sum_powers(n, p):
     """
@@ -49,6 +66,11 @@ def sum_powers(n, p):
     #   No fair running the code of  sum_powers  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
+    total = 0
+    for k in range(1,n):
+        total = (total + k**p)
+    return total
+
 
 
 def run_test_sum_powers_in_range():
