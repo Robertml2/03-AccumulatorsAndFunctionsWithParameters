@@ -17,6 +17,7 @@ def main():
     # Test your functions by putting calls to them here:
 
     print_sequence1()
+    print_sequence2()
 
 
 
@@ -41,7 +42,7 @@ def print_sequence1():
     print('Running print_sequence1:')
     print('--------------------------------------------------')
 
-    print_sequence1(11)
+    draw_circles1()
 
 
 
@@ -68,7 +69,7 @@ def draw_circles1():
     window = rg.RoseWindow(400, 400)
     center = rg.Point(200,200)
     for k in range(21):
-        circle = rg.Circle(center, k)
+        circle = rg.Circle(center, 10*k)
         circle.attach_to(window)
         window.render()
 
@@ -96,6 +97,8 @@ def print_sequence2():
     print('Running print_sequence2:')
     print('--------------------------------------------------')
 
+    draw_circles2()
+
 
 def draw_circles2():
     """
@@ -116,6 +119,18 @@ def draw_circles2():
     print('--------------------------------------------------')
     print('Running draw_circles2:  See graphics window')
     print('--------------------------------------------------')
+
+    window = rg.RoseWindow(400, 400)
+
+    for k in range(17):
+        circle = rg.Circle(rg.Point(50+20*k, 100), 10)
+        circle.attach_to(window)
+        circle.fill_color = 'blue'
+        window.render(.5)
+    window.close_on_mouse_click()
+
+
+
 
 
 def print_sequence3():
