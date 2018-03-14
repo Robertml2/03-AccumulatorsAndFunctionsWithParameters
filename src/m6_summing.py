@@ -30,25 +30,25 @@ def run_test_sum_cosines():
     print('Testing the   sum_cosines   function:')
     print('--------------------------------------------------')
 
-    expected = 1.5403
+    expected = 1.124155
     answer = sum_cosines(2)
-    print('Test 2 expected:', expected)
+    print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
-    expected = 1
+    expected = 1.54030
     answer = sum_cosines(1)
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
-    expected = 1.124155
+    expected = .13416
     answer = sum_cosines(3)
-    print('Test 2 expected:', expected)
+    print('Test 3 expected:', expected)
     print('       actual:  ', answer)
 
 
 def sum_cosines(n):
     total = 0
-    for k in range(n):
+    for k in range(n+1):
         total = total + math.cos(k)
 
     return total
@@ -92,7 +92,7 @@ def run_test_sum_square_roots():
 
     expected = 11.854408
     answer = sum_square_roots(5)
-    print('Test 2 expected:', expected)
+    print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
     expected = 3.4142135
@@ -102,7 +102,7 @@ def run_test_sum_square_roots():
 
     expected = 1.4142135
     answer = sum_square_roots(1)
-    print('Test 2 expected:', expected)
+    print('Test 3 expected:', expected)
     print('       actual:  ', answer)
 
 

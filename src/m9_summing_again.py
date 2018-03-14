@@ -30,18 +30,18 @@ def run_test_sum_powers():
     print('--------------------------------------------------')
 
     expected = 144.45655
-    answer = sum_powers(101, .1)
+    answer = sum_powers(100, .1)
     print('Test 1 expected:', expected )
     print('       actual:', answer)
 
     expected = 3.80826
-    answer = sum_powers(6, -0.3)
-    print('Test 1 expected:', expected)
+    answer = sum_powers(5, -0.3)
+    print('Test 2 expected:', expected)
     print('       actual:', answer)
 
-    expected = 10.50635
+    expected = 14.0115
     answer = sum_powers(6, .7)
-    print('Test 1 expected:', expected)
+    print('Test 3 expected:', expected)
     print('       actual:', answer)
 
 
@@ -67,7 +67,7 @@ def sum_powers(n, p):
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
     total = 0
-    for k in range(1,n):
+    for k in range(1,n+1):
         total = (total + k**p)
     return total
 
@@ -89,18 +89,18 @@ def run_test_sum_powers_in_range():
     print('--------------------------------------------------')
 
     expected = 142.38477
-    answer = sum_powers_in_range(3, 98, .1)
+    answer = sum_powers_in_range(3, 100, .1)
     print('Test 1 expected:', expected)
     print('       actual:', answer)
 
-    expected = 4.61245
-    answer = sum_powers_in_range(2, 3, .4)
-    print('Test 1 expected:', expected)
+    expected = 2.87135
+    answer = sum_powers_in_range(2, 4, .4)
+    print('Test 2 expected:', expected)
     print('       actual:', answer)
 
     expected = 1.932812
-    answer = sum_powers_in_range(3, 4, -.5)
-    print('Test 1 expected:', expected)
+    answer = sum_powers_in_range(3, 6, -.5)
+    print('Test 3 expected:', expected)
     print('       actual:', answer)
 
 
@@ -124,7 +124,7 @@ def sum_powers_in_range(m, n, p):
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
     total = 0
-    for k in range(n):
+    for k in range(n-2):
         total = total + (m +k) ** p
     return total
 
